@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ontouchmove="onDragAndDrop(event)" ontouchend="touchDrop()">
+    <div class="container">
+        <div class="todoList-wrapper">
+            <div class="todoList">
+                <h1>Todo List</h1>
+                <form action="" onsubmit="submitItem(event)">
+                <div>
+                    <label for="itemName">Nom de l'item</label><br>
+                    <input id="itemName" type="text" name="itemName">
+                </div>
+                <div>
+                    <label for="itemContent">Contenu de l'item</label><br>
+                    <input id="itemContent" type="text" name="itemContent">
+                </div>
+                <button type="submit">Ajouter l'item</button>
+                </form>
+                <div class="tableWrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>#</th>
+                                <th>Nom de l'item</th>
+                                <th>Contenu de l'tem</th>
+                            </tr>
+                        </thead>
+                        <tbody id="list">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="dragAndDrop" onmousemove="onDragAndDrop(event)"></div>
+</body>
+</html>

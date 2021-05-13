@@ -1,0 +1,188 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #f7f7f7;
+    overflow-x: hidden;
+    display: flex;
+}
+
+.container {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+}
+
+.todoList-wrapper {
+    position: relative;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.todoList {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    /* box-shadow: 0 2rem 4rem 0 #d9dada; */
+    min-width: 22.5rem;
+    box-sizing: border-box;
+}
+
+.todoList::before,
+.todoList::after {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+}
+
+.todoList::before {
+    width: 5rem;
+    height: 5rem;
+    left: -2.5rem;
+    top: -2.5rem;
+    /* background-color: #e44eb6; */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' stroke='%23e44eb6' stroke-width='20' fill='none' /%3E%3C/svg%3E ");
+}
+
+.todoList::after {
+    width: 100rem;
+    height: 100rem;
+    position: absolute;
+    right: -80rem;
+    bottom: -80rem;
+    background-color: #e44eb6;
+    z-index: -1;
+    border-radius: 100%;
+    border-radius: 100%;
+}
+
+
+h1 {
+    font-weight: bold;
+}
+
+form>div>input {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #eff3fb;
+    border-radius: .5rem;
+    border: 0;
+    padding: .5rem 0.75rem;
+    /* border-radius: .125rem; */
+}
+
+form>div {
+    margin-top: 1.34rem;
+    margin-bottom: 1.34rem;
+}
+
+form>button {
+    width: 100%;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    background-color: #e44eb6;
+    border-radius: .5rem;
+    border: 0;
+    color: white;
+    font-weight: bold;
+    transition-property: box-shadow, background-color;
+    transition-duration: .2s;
+}
+
+form>button:hover {
+    background-color: hsl(318, 74%, 50%);
+    box-shadow: 0 .5rem .5rem 0 #e5e7ea;
+}
+
+.tableWrapper {
+    margin-top: 1.34rem;
+    margin-bottom: 1.34rem;
+}
+
+table {
+    width: 100%;
+    border-spacing: unset;
+}
+
+#list>tr {
+    height: 2.5rem;
+}
+
+#list>tr>td {
+    padding: .25rem;
+}
+
+.key i {
+    color: white;
+    background-color: hsl(226, 74%, 80%);
+    font-size: .75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.trash {
+    cursor: pointer;
+    user-select: none;
+}
+
+#list>tr:nth-child(2n) {
+    background-color: #eff3fb;
+}
+
+#list>tr.active {
+    opacity: .5;
+    background-color: #9898ef;
+}
+
+i {
+    font-style: normal;
+}
+
+.listRow>td:first-child>i {
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+    cursor: grab;
+}
+
+.listRow>td:first-child>i>span {
+    color: #828bab;
+    line-height: .5rem;
+}
+
+#dragAndDrop.active {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: grabbing;
+}
+
+@media screen and (max-width: 22.5rem) {
+
+    .todoList-wrapper {
+        margin-top: unset;
+        margin-bottom: unset;
+    }
+    
+}
