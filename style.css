@@ -57,8 +57,7 @@ body {
     height: 5rem;
     left: -2.5rem;
     top: -2.5rem;
-    /* background-color: #e44eb6; */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' stroke='%23e44eb6' stroke-width='20' fill='none' /%3E%3C/svg%3E ");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Ccircle cx='50' cy='50' r='40' stroke='%23eb7ac9' stroke-width='20' fill='none' /%3E%3C/svg%3E ");
 }
 
 .todoList::after {
@@ -67,24 +66,32 @@ body {
     position: absolute;
     right: -80rem;
     bottom: -80rem;
-    background-color: #e44eb6;
+    background-color: #eb7ac9;
     z-index: -1;
     border-radius: 100%;
     border-radius: 100%;
 }
 
-
 h1 {
+    color: #2d3f5f;
     font-weight: bold;
 }
 
+form>div>label {
+    color: #5a7194;
+    font-size: .875rem;
+}
+
 form>div>input {
+    font-size: .875rem;
+    color: #2d3f5f;
     width: 100%;
     box-sizing: border-box;
     background-color: #eff3fb;
     border-radius: .5rem;
     border: 0;
     padding: .5rem 0.75rem;
+    margin-top: .5rem;
     /* border-radius: .125rem; */
 }
 
@@ -93,10 +100,11 @@ form>div {
     margin-bottom: 1.34rem;
 }
 
+
 form>button {
     width: 100%;
-    padding-top: .75rem;
-    padding-bottom: .75rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     background-color: #e44eb6;
     border-radius: .5rem;
     border: 0;
@@ -121,15 +129,28 @@ table {
     border-spacing: unset;
 }
 
+th {
+    color: #5a7194;
+    font-size: .875rem;
+    font-weight: unset;
+}
+
+thead>tr {
+    height: 2rem;
+}
+
 #list>tr {
     height: 2.5rem;
 }
 
 #list>tr>td {
+    font-size: .875rem;
+    color: #2d3f5f;
     padding: .25rem;
 }
 
 .key i {
+    user-select: none;
     color: white;
     background-color: hsl(226, 74%, 80%);
     font-size: .75rem;
@@ -187,6 +208,10 @@ i {
     .todoList-wrapper {
         margin-top: unset;
         margin-bottom: unset;
+    }
+
+    .todoList {
+        border-radius: unset;
     }
     
 }

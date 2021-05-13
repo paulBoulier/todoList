@@ -17,14 +17,14 @@
                 <h1>Todo List</h1>
                 <form action="" onsubmit="submitItem(event)">
                 <div>
-                    <label for="itemName">Nom de l'item</label><br>
+                    <label for="itemName">Tâche</label><br>
                     <input id="itemName" type="text" name="itemName">
                 </div>
                 <div>
-                    <label for="itemContent">Contenu de l'item</label><br>
+                    <label for="itemContent">Description</label><br>
                     <input id="itemContent" type="text" name="itemContent">
                 </div>
-                <button type="submit">Ajouter l'item</button>
+                <button type="submit">Ajouter</button>
                 </form>
                 <div class="tableWrapper">
                     <table>
@@ -32,8 +32,8 @@
                             <tr>
                                 <th></th>
                                 <th>#</th>
-                                <th>Nom de l'item</th>
-                                <th>Contenu de l'tem</th>
+                                <th>Tâche</th>
+                                <th>Description</th>
                             </tr>
                         </thead>
                         <tbody id="list">

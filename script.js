@@ -151,6 +151,7 @@ function clearForm() {
 
 // lors du submit du formulaire
 function submitItem(e) {
+    document.activeElement.blur()
     e.preventDefault()
     addItemToList(itemName.value, itemContent.value)
     clearForm()
