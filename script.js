@@ -100,7 +100,7 @@ function createListItemElement(key, name, content) {
             <td class="key"><i>${key + 1}</i></td>
             <td class="name">${name}</td>
             <td >${content}</td>
-            <td class="trash" onclick="deleteItem(this)">🗑️</td>
+            <td class="trash" onclick="deleteItem(this)"><i></i></td>
     `
     newTr.innerHTML = listInner
     list.appendChild(newTr)
