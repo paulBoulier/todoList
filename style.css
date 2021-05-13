@@ -2,12 +2,16 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    height: 100%;
+}
+
 body, html {
     width: 100%;
-    min-height: 100%;
 }
 
 body {
+    min-height: 100%;
     margin: 0;
     background-color: #f7f7f7;
     overflow-x: hidden;
